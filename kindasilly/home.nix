@@ -23,6 +23,8 @@
     jq
     eza
     fzf
+    obs-studio
+    libreoffice
 
     # networking tools
     mtr
@@ -57,6 +59,7 @@
     insomnia
     docker
     docker-compose
+    beekeeper-studio
 
     # system call monitoring
     strace

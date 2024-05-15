@@ -86,7 +86,7 @@
   users.users.kindasilly = {
     isNormalUser = true;
     description = "Guilherme";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
     #  firefox
     #  thunderbird
@@ -118,6 +118,10 @@
 
   # Enable docker
   virtualisation.docker.enable = true;
+
+  # Enable libvirtd & virt-manager
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
