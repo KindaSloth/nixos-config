@@ -107,6 +107,8 @@
     wget
     curl
     microsoft-edge
+    qemu
+    uxplay
   ];
 
   users.defaultUserShell = pkgs.zsh;
@@ -138,10 +140,22 @@
   programs.ssh.startAgent = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 7000 7001 7100 ];
+  networking.firewall.allowedUDPPorts = [ 5353 6000 6001 7011 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  services.avahi = {
+   enable = true;
+   nssmdns = true;
+   publish = {
+    enable = true;
+    addresses = true;
+    workstation = true;
+    userServices = true;
+    domain = true;
+   };
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
