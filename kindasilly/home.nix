@@ -25,6 +25,7 @@
     fzf
     obs-studio
     libreoffice
+    blender
 
     # networking tools
     mtr
