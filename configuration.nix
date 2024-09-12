@@ -117,6 +117,7 @@
 
   # Set the default editor to vim
   environment.variables.EDITOR = "vim";
+  environment.variables.LIBVA_DRIVER_NAME = "nvidia";
 
   # Enable docker
   virtualisation.docker.enable = true;
