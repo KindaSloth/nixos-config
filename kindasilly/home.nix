@@ -72,6 +72,7 @@
     lm_sensors
     pciutils
     usbutils
+    gparted
   ];
 
   programs.git = {
