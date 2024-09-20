@@ -110,6 +110,7 @@
     qemu
     uxplay
     cudatoolkit
+    cudaPackages.cudnn
   ];
 
   users.defaultUserShell = pkgs.zsh;
