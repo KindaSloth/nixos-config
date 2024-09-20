@@ -49,9 +49,11 @@
     driSupport32Bit = true;
   };
 
+  # Ensure NVIDIA drivers are included
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
     nvidiaSettings = true;
+    package = pkgs.linuxPackages.nvidia_x11;
   };
 }
