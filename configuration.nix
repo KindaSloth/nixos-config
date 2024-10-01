@@ -160,6 +160,8 @@
    };
   };
 
+  services.tailscale.enable = true;
+
   # Enable CUDA support
   nixpkgs.config.cudaSupport = true;
 
